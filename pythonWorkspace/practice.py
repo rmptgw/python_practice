@@ -59,3 +59,20 @@ from random import *
 # print( randrange(1,46) ) # 1이상 46 미만의 임의값 생성
 # print( randint(1,45) ) # 1이상 45이하의 임의값 생성
 
+python = "Python is Amazing"
+print( python.lower() ) # 소문자로 출력
+print( python.upper() ) # 대문자로 출력
+print( python[0].isupper() )
+print( len(python) )
+print(python.replace("Python", "Java"))
+
+index = python.index("n") # index() : 원하는 인덱스의 위치를 찾아줌
+print(index)
+
+index = python.index("n", index + 3)
+print(index)
+
+print(python.find("Java"))
+
+print("hi")
+print(python.count("n")) # count() 함수
