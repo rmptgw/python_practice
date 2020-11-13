@@ -51,7 +51,11 @@
 # print( sqrt( 16 ) ) # 제곱근
 
 from random import *
-print( random() ) # random() : 0.0 ~ 1.0의 임의의 값 생성
-print( random() * 10 )
-print( int( random() * 10 ) ) # int() : 정수형으로 표현
-print( int( random() * 10 ) + 1 ) 
+# print( random() ) # random() : 0.0 ~ 1.0의 임의의 값 생성
+# print( random() * 10 )
+# print( int( random() * 10 ) ) # int() : 정수형으로 표현
+# print( int( random() * 10 ) + 1 ) 
+
+# print( randrange(1,46) ) # 1이상 46 미만의 임의값 생성
+# print( randint(1,45) ) # 1이상 45이하의 임의값 생성
+
