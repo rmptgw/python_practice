@@ -38,14 +38,20 @@
 # a += 3
 # print(a)
 
-print( abs( -5 ) ) # abs() : 절대값
-print( pow( 4, 2 ) ) # pow(a,b) : a의 b승(제곱) 
-print( max( 5, 12 ) ) # min() : 최소값
-print( min( 5, 12 ) ) # max() : 최대값
-print( round( 3.14 ) ) # 반올림
-print( round( 4.99 ) ) # 반올림
+# print( abs( -5 ) ) # abs() : 절대값
+# print( pow( 4, 2 ) ) # pow(a,b) : a의 b승(제곱) 
+# print( max( 5, 12 ) ) # min() : 최소값
+# print( min( 5, 12 ) ) # max() : 최대값
+# print( round( 3.14 ) ) # 반올림
+# print( round( 4.99 ) ) # 반올림
 
-from math import *
-print( floor( 4.99 ) ) # 내림
-print( ceil( 3.14 ) ) # 올림
-print( sqrt( 16 ) ) # 제곱근
+# from math import *
+# print( floor( 4.99 ) ) # 내림
+# print( ceil( 3.14 ) ) # 올림
+# print( sqrt( 16 ) ) # 제곱근
+
+from random import *
+print( random() ) # random() : 0.0 ~ 1.0의 임의의 값 생성
+print( random() * 10 )
+print( int( random() * 10 ) ) # int() : 정수형으로 표현
+print( int( random() * 10 ) + 1 ) 
