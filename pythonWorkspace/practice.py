@@ -162,3 +162,118 @@
 # num_list = [5,2,4,3,1]
 # num_list.extend(mix_list)
 # print(num_list)
+
+# # 사전 : {}로 표현
+# '3:"유재석" = key:value' 의 형태로 생성
+# key = id값, value = 내부 값
+# 사전을 불러오는 방법 1
+# 사전이름 : cabinet
+# cabinet[3] : 의 형태로 대괄호 를 통해 가져옴
+# 사전을 불러오는 방법 2
+# cabinet.get(3) : 의 형태로 get() 함수를 통해 가져옴
+# 방법 2의 경우 값이 없어도 오류를 내지 않고 None을 출력하고 
+# cabinet = {3:"유재석", 100:"김태호"}
+# print(cabinet[3])
+# print(cabinet[100])
+# print(cabinet.get(3))
+
+# # 사전 내 값을 확인하는 방법 
+# # 1. get() 함수를 활용하는 방법
+# # None을 출력하는 경우 "사용가능"으로 대체하여 출력함으로써 사용가능여부를 확인할 수 있음
+# print(cabinet.get(5))
+# print(cabinet.get(5, "사용가능")) 
+
+# # 2. in을 활용하는 방법
+# # in을 활용하는 경우 값이 있으면 논리값 True를 출력하며, 값이 없는 경우(사용가능한 경우) False를 출력한다.
+# print(3 in cabinet)
+# print(5 in cabinet)
+
+# cabinet = {"A-3":"유재석", "B-100":"조세호"}
+# # key update(값이 없는 경우 새로 생성)
+# cabinet["A-3"] = "김종국"
+# cabinet["C-20"] = "조세호"
+# print(cabinet)
+
+# # 사전 내 자료 삭제
+# # del 을 활용하여 삭제 가능
+# del cabinet["A-3"]
+# print(cabinet)
+
+# # key 전체 출력
+# # keys() 함수 활용
+# print( cabinet.keys() )
+
+# # value 전체 출력
+# # values() 함수 활용
+# print( cabinet.values() )
+
+# # key와 value 쌍으로(묶어서 출력)
+# # items() 함수 활용
+# print( cabinet.items() )
+
+# # 사전 내 전체 자료 지우기
+# cabinet.clear()
+# print(cabinet)
+
+# # 튜플 () : 소괄호로 표현
+# # 리스트와 다르게 변경할 수 없음, 리스트보다 속도가 빠름
+# # 변경되지 않는 목록에 사용(고정목록)
+# menu = ("돈까스", "치즈까스")
+# print(menu[0])
+# print(menu[1])
+
+# # 튜플의 장점으로 다중 값을 한번에 생성가능
+# name = "김종국"
+# age = 20
+# hobby = "코딩"
+# print(name,age, hobby)
+# # 를 아래와 같은 형태로 선언가능
+# ( name, age, hobby ) = ( "김종국", 20, "코딩" )
+# print(name,age, hobby)
+
+# # 세트(set) : 집합
+# # 미중복, 순서 없음
+# # {}로 표현 / 사전과의 차이는 key와 value를 같이 적는 것이 아니라 value만 작성
+# # set() 함수를 통해 작성 가능 / 리스트를 set으로 변경
+# my_set = {1,2,3,3,3}
+# print(my_set) # 출력값이 중복되지 않음
+
+# java = {"유재석", "김태호", "양세형"}
+# python = set(["유재석", "박명수"])
+
+# # 교집합 출력( java와 python의 교집합 )
+# # 표현방식 : & 기호 사용, intersection() 함수 사용
+# print( java & python )
+# print( java.intersection(python) )
+
+# # 합집합 출력( java와 python의 합집합 )
+# # 표현방식 : | 기호 사용, union() 함수 사용
+# print( java | python )
+# print( java.union(python) )
+
+# # 차집합 ( java에만 있는 사람, 파이썬에는 없음 )
+# # 표현방식 : - 기호 사용, difference() 함수 사용
+# print( java - python )
+# print( java.difference( python ) )
+
+# # 집합에 값 추가( python에 "김태호" 추가 )
+# # add() 함수 사용
+# python.add("김태호")
+# print(python)
+
+# # 집합 내 값 삭제( java에서 "김태호" 삭제 )
+# # remove() 함수 사용
+# java.remove("김태호")
+# print(java)
+
+# # 자료구조 변경
+# # 커피숍
+# menu = {"커피", "우유", "주스"} # 집합으로 생성
+# print( menu, type(menu) )
+
+# menu = list( menu )
+# print( menu, type(menu) )
+# menu = tuple( menu )
+# print( menu, type(menu) )
+# menu = set( menu )
+# print( menu, type(menu) )
