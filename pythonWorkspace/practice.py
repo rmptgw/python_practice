@@ -352,6 +352,82 @@
 # print(student)
 # student = [len(i) for i in student]
 # print(student)
-student = ["Iron man", "Thor", "I an groot"]
-student = [i.upper() for i in student]
-print(student)
+# student = ["Iron man", "Thor", "I an groot"]
+# student = [i.upper() for i in student]
+# print(student)
+
+# # 함수
+# def open_account():
+#     print('새로운 계좌가 생성되었습니다.')
+
+# def deposit(balance, money): # 입금
+#     print('입금이 완료되었습니다. 잔액은 {0} 원 입니다.'.format( balance + money ) )
+#     return balance + money
+
+# def withraw( balance, money ): # 출금
+#     if balance >= money:
+#         print('출금이 완료되었습니다. 잔액은 {0} 원입니다.'.format(balance - money))
+#         return balance - money
+#     else:
+#         print('출금이 완료되지 않았습니다. 잔액은 {0} 원입니다.'.format(balance))
+#         return balance
+# def withraw_night(balance, money): #저녁에 출금
+#     commission = 100 # 수수료 100원
+#     return commission, balance - money - commission
+
+# balance = 0 # 잔액
+# balance = deposit( balance, 1000 )
+# print( balance )
+
+# balance = withraw(balance, 700)
+# print(balance)
+# balance = withraw(balance, 700)
+# print(balance)
+# commission, balance = withraw_night(balance, 100 )
+# print('수수료는 {0}원이며, 잔액은 {1}입니다.'.format(commission, balance))
+
+# def profile( name, age, main_lang ):
+#     print('이름 : {0} \t나이: {1}\t주 사용 언어: {2}'\
+#         .format(name, age, main_lang))
+
+# profile('유재석', 20, '파이썬')
+
+# def profile( name, age=17, main_lang='파이썬' ):
+#     print('이름 : {0} \t나이: {1}\t주 사용 언어: {2}'\
+#         .format(name, age, main_lang))
+# profile('유재석')
+# profile('김태호')
+
+# # 키워드 값을 이용한 함수 호출
+# def profile(name, age, main_lang):
+#     print(name, age, main_lang)
+
+# profile(name='유재석', main_lang='자바', age=11)
+
+# def profile(name, age, lang1, lang2, lang3, lang4, lang5):
+#     print('이름: {0}\t나이 : {1}\t'.format(name, age), end= " ")
+#     print(lang1, lang2, lang3, lang4, lang5 )
+
+
+# def profile(name, age, *language):
+#     print('이름: {0}\t나이 : {1}\t'.format(name, age), end= " ")
+#     for lang in language:
+#         print( lang, end= " " )
+#     print()
+
+# profile('유재석', 20, "Python", "Java", "C", "C++", "C#" )
+# profile('김태호', 23, "Python", "Java", )
+
+gun = 10
+def checkpoint(soldiers): # 경계근무
+    global gun # 전역변수
+    gun -= soldiers
+    print('[함수 내] 남은 총: {0}'.format(gun))
+def checkpoint_ret(gun, soldiers): # 경계근무
+    gun -= soldiers
+    print('[함수 내] 남은 총: {0}'.format(gun))
+    return gun
+
+print('전체 총: {0}'.format(gun))
+gun = checkpoint_ret(gun, 2)
+print('남은 총: {0}'.format(gun))
