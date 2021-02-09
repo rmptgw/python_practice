@@ -418,16 +418,32 @@
 # profile('유재석', 20, "Python", "Java", "C", "C++", "C#" )
 # profile('김태호', 23, "Python", "Java", )
 
-gun = 10
-def checkpoint(soldiers): # 경계근무
-    global gun # 전역변수
-    gun -= soldiers
-    print('[함수 내] 남은 총: {0}'.format(gun))
-def checkpoint_ret(gun, soldiers): # 경계근무
-    gun -= soldiers
-    print('[함수 내] 남은 총: {0}'.format(gun))
-    return gun
+# gun = 10
+# def checkpoint(soldiers): # 경계근무
+#     global gun # 전역변수
+#     gun -= soldiers
+#     print('[함수 내] 남은 총: {0}'.format(gun))
+# def checkpoint_ret(gun, soldiers): # 경계근무
+#     gun -= soldiers
+#     print('[함수 내] 남은 총: {0}'.format(gun))
+#     return gun
 
-print('전체 총: {0}'.format(gun))
-gun = checkpoint_ret(gun, 2)
-print('남은 총: {0}'.format(gun))
+# print('전체 총: {0}'.format(gun))
+# gun = checkpoint_ret(gun, 2)
+# print('남은 총: {0}'.format(gun))
+
+# import sys
+# print('Python', 'Java', file=sys.stdout)
+# print('Python', 'Java', file=sys.stderr)
+
+# 시험 성적
+# score = {'수학':0, '영어':50, '코딩':100}
+# for subject, score in score.items():
+#     # print( subject, score )
+#     print( subject.ljust(8), str(score).rjust(4), sep=" : " )
+
+# answer = input('아무 값이나 입력하세요 : ')
+# print('입력하신 값은 ' + answer + '입니다.' )
+# answer = 10
+# print(type(answer))
+
