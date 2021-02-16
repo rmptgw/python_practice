@@ -447,3 +447,61 @@
 # answer = 10
 # print(type(answer))
 
+# score_file = open('score.txt', 'w', encoding='utf8')
+# print('수학 :  0', file=score_file)
+# print('영어 : 50', file=score_file)
+# score_file.close()
+
+# score_file = open('score.txt', 'a', encoding='utf8')
+# score_file.write('과학 : 80\n')
+# score_file.write('코딩 :100')
+# score_file.close()
+
+# score_file = open('score.txt', 'r', encoding='utf8')
+# print( score_file.read() )
+# score_file.close()
+
+# score_file = open('score.txt', 'r', encoding='utf8')
+# print(score_file.readline(), end='')
+# print(score_file.readline(), end='')
+# print(score_file.readline(), end='')
+# print(score_file.readline(), end='')
+# score_file.close()
+
+# score_file = open('score.txt', 'r', encoding='utf8')
+# while True:
+#     line = score_file.readline()
+#     if not line:
+#         break
+#     print(line, end='')
+# score_file.close()
+
+# score_file = open('score.txt', 'r', encoding='utf8')
+# lines = score_file.readlines()
+# for line in lines:
+#     print(line, end='')
+# score_file.close()
+
+# pickle // dataset을 file 형태로 저장한 것
+ 
+# import pickle
+# profile_file = open('profile.pickle', 'wb')
+# profile = {'이름':'박명수', '나이':30, '취미':['축구', '골프', '코딩']}
+# print(profile)
+# pickle.dump(profile, profile_file) # profile에 있는 정보를 file에 저장
+# profile_file.close()
+
+# import pickle
+# profile_file = open('profile.pickle', 'rb')
+# profile = pickle.load(profile_file)
+# print(profile)
+# profile_file.close()
+
+# # with 명령어 사용시 close를 별도로 해줄 필요가 없음
+# import pickle
+# with open('profile.pickle', 'rb') as profile_file:
+# 	print(pickle.load(profile_file))
+# with open('study.txt', 'w', encoding='utf8') as study_file:
+# 	study_file.write('파이썬을 열심히 공부하고 있어요.')
+# with open('study.txt', 'r', encoding='utf8') as study_file:
+# 	print(study_file.read())
