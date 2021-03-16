@@ -1,5 +1,5 @@
 {
     "python.pythonPath": "C:\\Users\\TG\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
     "python.autoComplete.addBrackets": true,
-    "python.analysis.completeFunctionParens": true
+    "python.analysis.completeFunctionParens": true,
 }
