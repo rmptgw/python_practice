@@ -25,21 +25,26 @@ import random
 pygame.init() # 초기화(반드시 필요)
 
 # 화면 크기 설정
-screen_width  = 480 # 가로 크기
-screen_height = 640 # 세로 크기
+screen_width  = 640 # 가로 크기
+screen_height = 480 # 세로 크기
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 # 화면 타이틀 설정
-pygame.display.set_caption("Quiz: 똥 피하기") # 게임 이름
+pygame.display.set_caption("Project) 오락실 Pang 게임 만들기") # 게임 이름
 
 # FPS
 clock = pygame.time.Clock()
 ############################################################
 # 1. 사용자 게임 초기화 (배경화면, 게임이미지, 좌표, 폰트, 속도 등 )
-# 배경
-background = pygame.image.load("/Users/tg/Documents/python_practice/pythonWorkspace/pygame_basic/tmp.background.png")
-character  = pygame.image.load("/Users/tg/Documents/python_practice/pythonWorkspace/pygame_basic/tmp.character.png")
-enemy      = pygame.image.load("/Users/tg/Documents/python_practice/pythonWorkspace/pygame_basic/tmp.enemy.png")
+# 배경 및 이미지 지정
+background = pygame.image.load("/Users/tg/Documents/python_practice/pythonWorkspace/pygame_project/background.png")
+character  = pygame.image.load("/Users/tg/Documents/python_practice/pythonWorkspace/pygame_project/character.png")
+stage      = pygame.image.load("/Users/tg/Documents/python_practice/pythonWorkspace/pygame_project/stage.png")
+weapon     = pygame.image.load("/Users/tg/Documents/python_practice/pythonWorkspace/pygame_project/weapon.png")
+balloon1   = pygame.image.load("/Users/tg/Documents/python_practice/pythonWorkspace/pygame_project/balloon1.png")
+balloon2   = pygame.image.load("/Users/tg/Documents/python_practice/pythonWorkspace/pygame_project/balloon2.png")
+balloon3   = pygame.image.load("/Users/tg/Documents/python_practice/pythonWorkspace/pygame_project/balloon3.png")
+balloon4   = pygame.image.load("/Users/tg/Documents/python_practice/pythonWorkspace/pygame_project/balloon4.png")
 
 # 캐릭터 설정
 character_size   = character.get_rect().size
@@ -49,7 +54,7 @@ character_x_pos  = ( screen_width  / 2 ) - ( character_width  / 2 )
 character_y_pos  = screen_height - character_height
 
 # 똥 설정
-enemy_size   = enemy.get_rect().size
+ballo_size   = enemy.get_rect().size
 enemy_width  = enemy_size[0]
 enemy_height = enemy_size[1]
 enemy_x_pos  = random.randint(0, ( screen_width - ( enemy_width / 2 ) ) )
