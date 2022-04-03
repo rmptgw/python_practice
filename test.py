@@ -1,3 +1,5 @@
+# 백준 문제풀이
+
 # # 2884 / 알람 맞추기
 # time = input()
 # hour = int(time.split()[0])
@@ -108,25 +110,25 @@
 #     a,b = map(int, n.split())
 #     print(a+b)
 
-# 1110 / 더하기 사이클
-import sys
+# # 1110 / 더하기 사이클
+# import sys
 
-n = int( sys.stdin.readline() )
-cnt = 0
-new = 0
-old = n
+# n = int( sys.stdin.readline() )
+# cnt = 0
+# new = 0
+# old = n
 
-a = n // 10
-b = n % 10
+# a = n // 10
+# b = n % 10
 
-while True:
-    if new == old and cnt != 0:
-        break
+# while True:
+#     if new == old and cnt != 0:
+#         break
     
-    new = b * 10 + (( a + b ) % 10 )
-    cnt += 1
+#     new = b * 10 + (( a + b ) % 10 )
+#     cnt += 1
     
-    a = new // 10
-    b = new % 10
+#     a = new // 10
+#     b = new % 10
 
-print(cnt)
+# print(cnt)
