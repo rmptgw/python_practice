@@ -133,11 +133,20 @@
 
 # print(cnt)
 
-# 10818 / 최대, 최소
-import sys
-n = int( sys.stdin.readline() )
-num =  sys.stdin.readline().split()
-for i in range(n):
-    num[i] = int( num[i] )
+# # 10818 / 최대, 최소
+# import sys
+# n = int( sys.stdin.readline() )
+# num =  sys.stdin.readline().split()
+# for i in range(n):
+#     num[i] = int( num[i] )
 
-print(min(num), max(num))
+# print(min(num), max(num))
+
+# 2562 / 최댓값
+import sys
+num = []
+for i in range(9):
+    num.append( int( sys.stdin.readline() ) )
+
+print( max( num ) )
+print( num.index( max(num) ) + 1)
