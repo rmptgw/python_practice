@@ -142,11 +142,31 @@
 
 # print(min(num), max(num))
 
-# 2562 / 최댓값
-import sys
-num = []
-for i in range(9):
-    num.append( int( sys.stdin.readline() ) )
+# # 2562 / 최댓값
+# import sys
+# num = []
+# for i in range(9):
+#     num.append( int( sys.stdin.readline() ) )
 
-print( max( num ) )
-print( num.index( max(num) ) + 1)
+# print( max( num ) )
+# print( num.index( max(num) ) + 1)
+
+# 2577 / 숫자의 개수
+import sys
+
+a = int( sys.stdin.readline() )
+b = int( sys.stdin.readline() )
+c = int( sys.stdin.readline() )
+
+mid = a * b * c
+num = []
+# result = []
+print(mid, len(str(mid)))
+for i in range(len(str(mid)), 0, -1):
+    div = mid // (10**(i-1))
+    num.append( div )
+    mid -= (div * (10**(i -1) ) )
+
+for i in range(0,10):
+    print(num.count(i))
+
