@@ -132,3 +132,12 @@
 #     b = new % 10
 
 # print(cnt)
+
+# 10818 / 최대, 최소
+import sys
+n = int( sys.stdin.readline() )
+num =  sys.stdin.readline().split()
+for i in range(n):
+    num[i] = int( num[i] )
+
+print(min(num), max(num))
